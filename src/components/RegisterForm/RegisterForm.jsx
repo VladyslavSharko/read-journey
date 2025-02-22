@@ -1,11 +1,12 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
+
+import { registerThunk } from "../../redux/auth/operations.js";
 import css from "./RegisterForm.module.css";
 
 const schema = yup.object().shape({
@@ -21,7 +22,7 @@ const schema = yup.object().shape({
 });
 
 const RegisterForm = () => {
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const {
@@ -32,11 +33,13 @@ const RegisterForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async () => {
+  const onSubmit = async (data) => {
     try {
-      //   await dispatch(registerThunk(data)).unwrap();
+      dispatch(registerThunk(data));
+      console.log(data);
+      
       toast.success("Registration successful!");
-      navigate("/recommended");
+      navigate("/");
     } catch (error) {
       toast.error(error.message || "Registration failed!");
     }
