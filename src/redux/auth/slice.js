@@ -1,12 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loginThunk, registerThunk } from "./operations";
+import {
+  getMeThunk,
+  loginThunk,
+  logoutThunk,
+  refreshUserThunk,
+  registerThunk,
+} from "./operations";
 
 const initialState = {
   user: {
     email: "",
     name: "",
   },
-  token: "",
+  token: localStorage.getItem("token"),
   isLoggedIn: false,
 };
 
@@ -24,6 +30,19 @@ const slice = createSlice({
         state.user = { email: action.payload.email, name: action.payload.name };
         state.token = action.payload.token;
         state.isLoggedIn = true;
+      })
+      .addCase(getMeThunk.fulfilled, (state, action) => {
+        state.isLoggedIn = true;
+        state.user.name = action.payload.name;
+        state.user.email = action.payload.email;
+      })
+      .addCase(refreshUserThunk.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isLoggedIn = true;
+      })
+      .addCase(logoutThunk.fulfilled, () => {
+        localStorage.removeItem("token");
+        return initialState;
       });
   },
 });

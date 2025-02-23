@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -70,7 +70,7 @@ const LoginForm = () => {
           <button type="submit" disabled={isSubmitting}>
             Login
           </button>
-          <p>Do not have an account?</p>
+          <NavLink to="/register">Do not have an account?</NavLink>
         </div>
       </form>
     </div>

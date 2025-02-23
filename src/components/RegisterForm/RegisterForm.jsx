@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -37,7 +37,7 @@ const RegisterForm = () => {
     try {
       dispatch(registerThunk(data));
       console.log(data);
-      
+
       toast.success("Registration successful!");
       navigate("/");
     } catch (error) {
@@ -71,7 +71,7 @@ const RegisterForm = () => {
           <button type="submit" disabled={isSubmitting}>
             Registration
           </button>
-          <p>Already have an account?</p>
+          <NavLink to="/login">Already have an account?</NavLink>
         </div>
       </form>
     </div>
