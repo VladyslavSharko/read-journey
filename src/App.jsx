@@ -9,7 +9,6 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getMeThunk } from "./redux/auth/operations";
 import PrivateRoute from "./Routes/PrivateRoute";
-import PublicRoute from "./Routes/PublicRoute";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -21,10 +20,8 @@ const App = () => {
   return (
     <div className="appContainer">
       <Routes>
-        <Route element={<PublicRoute />}>
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-        </Route>
 
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<Layout />}>
