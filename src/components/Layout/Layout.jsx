@@ -10,15 +10,9 @@ const Layout = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   dispatch(refreshUserThunk());
-  // }, [dispatch]);
   useEffect(() => {
-    if (user.token) {
-      dispatch(refreshUserThunk());
-    }
-  }, [dispatch, user.token]);
-  
+    dispatch(refreshUserThunk());
+  }, [dispatch]);
 
   return (
     <div className={css.layout}>
