@@ -22,3 +22,18 @@
     display: none;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .mainImgBoard {
+    width: 50%;
+    display: block;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .iphoneImg {
+    width: 405px;
+    height: auto;
+    bottom: 0;
+  }
+}

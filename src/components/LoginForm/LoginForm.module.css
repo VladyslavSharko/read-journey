@@ -150,3 +150,17 @@
     line-height: 1.29;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .containerLoginForm {
+    width: 50%;
+    padding: 40px 64px;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+  }
+
+  .mainTitle {
+    margin-top: 108px;
+    font-size: 64px;
+  }
+}

@@ -1,14 +1,14 @@
-import LoginForm from "../components/LoginForm/LoginForm"
-import MainImgBoard from "../components/MainImgBoard/MainImgBoard"
-
+import LoginForm from "../components/LoginForm/LoginForm";
+import MainImgBoard from "../components/MainImgBoard/MainImgBoard";
+import "./styles.css";
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className="loginPage">
       <LoginForm />
-      <MainImgBoard/>
+      <MainImgBoard />
     </div>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;
