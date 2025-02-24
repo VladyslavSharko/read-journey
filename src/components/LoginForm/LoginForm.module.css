@@ -132,6 +132,10 @@
     font-size: 14px;
   }
 
+  .loginInput:focus {
+    outline: 1px solid rgba(249, 249, 249, 0.1);
+  }
+
   .buttonWrapper {
     margin-top: 146px;
     gap: 20px;

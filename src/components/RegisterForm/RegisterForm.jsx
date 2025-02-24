@@ -47,12 +47,12 @@ const RegisterForm = () => {
 
   return (
     <div className={css.containerRegisterForm}>
-      <NavLink className={css.mainLogo} to="/">
+      <div className={css.mainLogo}>
         <svg className={css.mainLogoIcon}>
           <use href="/icons.svg#mainLogo" />
         </svg>
         <p className={css.mainLogoText}>read journey</p>
-      </NavLink>
+      </div>
 
       <h1 className={css.mainTitle}>
         Expand your mind, reading{" "}
@@ -89,10 +89,16 @@ const RegisterForm = () => {
         </div>
 
         <div className={css.buttonWrapper}>
-          <button className={css.registerButton} type="submit" disabled={isSubmitting}>
+          <button
+            className={css.registerButton}
+            type="submit"
+            disabled={isSubmitting}
+          >
             Registration
           </button>
-          <NavLink className={css.torLoginLink} to="/login">Already have an account?</NavLink>
+          <NavLink className={css.torLoginLink} to="/login">
+            Already have an account?
+          </NavLink>
         </div>
       </form>
     </div>

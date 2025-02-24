@@ -46,12 +46,12 @@ const LoginForm = () => {
 
   return (
     <div className={css.containerLoginForm}>
-      <NavLink className={css.mainLogo} to="/">
+      <div className={css.mainLogo}>
         <svg className={css.mainLogoIcon}>
           <use href="/icons.svg#mainLogo" />
         </svg>
         <p className={css.mainLogoText}>read journey</p>
-      </NavLink>
+      </div>
 
       <h1 className={css.mainTitle}>
         Expand your mind, reading{" "}
@@ -61,11 +61,15 @@ const LoginForm = () => {
       <form className={css.loginForm} onSubmit={handleSubmit(onSubmit)}>
         <div className={css.inputWrapper}>
           <input
-            className={css.loginInput}
+            className={`${css.loginInput} ${
+              errors.email ? css.loginInputError : ""
+            }`}
             {...register("email")}
             placeholder="Mail:"
           />
-          {/* {errors.email && <p>{errors.email.message}</p>} */}
+          {errors.password && (
+            <p className={css.errorMessage}>Enter a valid Email*</p>
+          )}
         </div>
 
         <div>
