@@ -45,32 +45,47 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className={css.containerLoginForm}>
+      <svg className={css.mainLogoIcon}>
+        <use href="/icons.svg#mainLogo" />
+      </svg>
+
+      <h1 className={css.mainTitle}>
+        Expand your mind, reading{" "}
+        <span className={css.mainTitleSpan}>a book</span>
+      </h1>
+
       <form className={css.loginForm} onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className={css.inputWrapper}>
           <input
             className={css.loginInput}
             {...register("email")}
-            placeholder="Email"
+            placeholder="Mail:"
           />
-          {errors.email && <p>{errors.email.message}</p>}
+          {/* {errors.email && <p>{errors.email.message}</p>} */}
         </div>
 
         <div>
           <input
-            className={css.loginInput}
+            className={`${css.loginInput} ${errors.email ? css.loginInputError : ""}`}
             type="password"
             {...register("password")}
-            placeholder="Password"
+            placeholder="Password:"
           />
-          {errors.password && <p>{errors.password.message}</p>}
+          {errors.password && <p className={css.errorMessage}>Enter a valid Password*</p>}
         </div>
 
-        <div>
-          <button type="submit" disabled={isSubmitting}>
-            Login
+        <div className={css.buttonWrapper}>
+          <button
+            className={css.loginButton}
+            type="submit"
+            disabled={isSubmitting}
+          >
+            Log in
           </button>
-          <NavLink to="/register">Do not have an account?</NavLink>
+          <NavLink className={css.torRegisterLink} to="/register">
+            Do not have an account?
+          </NavLink>
         </div>
       </form>
     </div>
@@ -78,11 +93,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
-// import css from "./LoginForm.module.css";
-
-// const LoginForm = () => {
-//   return <div className={css.loginForm}></div>;
-// };
-
-// export default LoginForm;

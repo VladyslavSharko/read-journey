@@ -1,3 +1,88 @@
+.containerLoginForm {
+  padding: 20px 20px 40px 20px;
+  background-color: #1f1f1f;
+  border-radius: 30px;
+}
+
+.mainLogoIcon {
+  width: 42px;
+  height: 17px;
+}
+
+.mainTitle {
+  margin-top: 40px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mainTitleSpan {
+  color: rgba(227, 227, 227, 0.5);
+}
+
+.loginForm {
+  margin-top: 20px;
+}
+
+.inputWrapper {
+  margin-bottom: 8px;
+}
+
 .loginInput {
- width: 100%;
+  width: 100%;
+  padding: 14px;
+  background-color: #262626;
+  border: none;
+  border-radius: 12px;
+  color: inherit;
+  outline: none;
+}
+
+.loginInputError {
+  border: 1px solid #e90516;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 72px;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  padding: 12px 45px;
+  border-radius: 30px;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+}
+
+.torRegisterLink {
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+}
+
+.errorMessage {
+  color: #e90516;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
