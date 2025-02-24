@@ -4,9 +4,20 @@
   border-radius: 30px;
 }
 
+.mainLogo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: inherit;
+}
+
 .mainLogoIcon {
   width: 42px;
   height: 17px;
+}
+
+.mainLogoText {
+  display: none;
 }
 
 .mainTitle {
@@ -85,4 +96,57 @@
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .containerLoginForm {
+    padding: 40px 168px 214px 64px;
+    background-color: #1f1f1f;
+    border-radius: 30px;
+  }
+
+  .mainLogoText {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .mainTitle {
+    margin-top: 158px;
+    font-size: 64px;
+    line-height: 0.94;
+    width: 444px;
+  }
+
+  .loginForm {
+    margin-top: 40px;
+  }
+
+  .inputWrapper {
+    margin-bottom: 14px;
+  }
+
+  .loginInput {
+    width: 100%;
+    padding: 16px 14px;
+    font-size: 14px;
+  }
+
+  .buttonWrapper {
+    margin-top: 146px;
+    gap: 20px;
+  }
+
+  .loginButton {
+    padding: 16px 54px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .torRegisterLink {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }

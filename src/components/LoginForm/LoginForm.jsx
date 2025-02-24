@@ -46,9 +46,12 @@ const LoginForm = () => {
 
   return (
     <div className={css.containerLoginForm}>
-      <svg className={css.mainLogoIcon}>
-        <use href="/icons.svg#mainLogo" />
-      </svg>
+      <NavLink className={css.mainLogo} to="/">
+        <svg className={css.mainLogoIcon}>
+          <use href="/icons.svg#mainLogo" />
+        </svg>
+        <p className={css.mainLogoText}>read journey</p>
+      </NavLink>
 
       <h1 className={css.mainTitle}>
         Expand your mind, reading{" "}
@@ -67,12 +70,16 @@ const LoginForm = () => {
 
         <div>
           <input
-            className={`${css.loginInput} ${errors.email ? css.loginInputError : ""}`}
+            className={`${css.loginInput} ${
+              errors.email ? css.loginInputError : ""
+            }`}
             type="password"
             {...register("password")}
             placeholder="Password:"
           />
-          {errors.password && <p className={css.errorMessage}>Enter a valid Password*</p>}
+          {errors.password && (
+            <p className={css.errorMessage}>Enter a valid Password*</p>
+          )}
         </div>
 
         <div className={css.buttonWrapper}>
