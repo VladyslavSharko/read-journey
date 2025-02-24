@@ -1,4 +1,5 @@
 @media screen and (min-width: 1280px) {
+  .registerPage,
   .loginPage {
     display: flex;
     gap: 16px;

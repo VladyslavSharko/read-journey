@@ -46,15 +46,35 @@ const RegisterForm = () => {
   };
 
   return (
-    <div>
+    <div className={css.containerRegisterForm}>
+      <NavLink className={css.mainLogo} to="/">
+        <svg className={css.mainLogoIcon}>
+          <use href="/icons.svg#mainLogo" />
+        </svg>
+        <p className={css.mainLogoText}>read journey</p>
+      </NavLink>
+
+      <h1 className={css.mainTitle}>
+        Expand your mind, reading{" "}
+        <span className={css.mainTitleSpan}>a book</span>
+      </h1>
+
       <form className={css.registerForm} onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <input className={css.registerInput} {...register("name")} />
+        <div className={css.inputWrapper}>
+          <input
+            className={css.registerInput}
+            {...register("name")}
+            placeholder="Name:"
+          />
           {errors.name && <p>{errors.name.message}</p>}
         </div>
 
-        <div>
-          <input className={css.registerInput} {...register("email")} />
+        <div className={css.inputWrapper}>
+          <input
+            className={css.registerInput}
+            {...register("email")}
+            placeholder="Mail:"
+          />
           {errors.email && <p>{errors.email.message}</p>}
         </div>
 
@@ -63,15 +83,16 @@ const RegisterForm = () => {
             className={css.registerInput}
             type="password"
             {...register("password")}
+            placeholder="Password:"
           />
           {errors.password && <p>{errors.password.message}</p>}
         </div>
 
-        <div>
-          <button type="submit" disabled={isSubmitting}>
+        <div className={css.buttonWrapper}>
+          <button className={css.registerButton} type="submit" disabled={isSubmitting}>
             Registration
           </button>
-          <NavLink to="/login">Already have an account?</NavLink>
+          <NavLink className={css.torLoginLink} to="/login">Already have an account?</NavLink>
         </div>
       </form>
     </div>
