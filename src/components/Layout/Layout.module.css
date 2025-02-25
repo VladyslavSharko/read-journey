@@ -181,6 +181,12 @@
   .containerUserMenu {
     margin-right: 0;
     margin-left: auto;
+    gap: 16px;
+  }
+
+  .userAvatar {
+    width: 40px;
+    height: 40px;
   }
 
   .logoutButton {
@@ -205,8 +211,26 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .mainLogo {
+    display: flex;
+    gap: 4px;
+  }
+
   .mainLogoText {
     display: block;
+    text-transform: uppercase;
+    color: #F9F9F9;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .nav {
+    margin-left: 334px;
+  }
+
+  .containerUserInfo {
+    gap: 8px;
   }
 
   .userName {
