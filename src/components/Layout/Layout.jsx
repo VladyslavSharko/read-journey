@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../redux/auth/selectors";
 import { logoutThunk, refreshUserThunk } from "../../redux/auth/operations";
 import { useEffect } from "react";
+import { BurgerMenuIcon } from "../Icons";
 
 const Layout = () => {
   const user = useSelector(selectUser);
@@ -16,27 +17,50 @@ const Layout = () => {
 
   return (
     <div className={css.layout}>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
+      <header className={css.header}>
+        <NavLink className={css.mainLogo} to="/">
+          <svg className={css.mainLogoIcon}>
+            <use href="/icons.svg#mainLogo" />
+          </svg>
+          <p className={css.mainLogoText}>read journey</p>
+        </NavLink>
+        <nav className={css.nav}>
+          <ul className={css.navList}>
+            <li className={css.navListItem}>
+              <NavLink className={css.navLink} to="/">
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/library">Library</NavLink>
+              <NavLink className={css.navLink} to="/library">
+                Library
+              </NavLink>
             </li>
           </ul>
         </nav>
-        <p>Hello, {user?.name || "Guest"}</p>
-        <button
-          type="button"
-          onClick={async () => {
-            await dispatch(logoutThunk()).unwrap();
-            navigate("/login");
-          }}
-        >
-          Log out
-        </button>
+        <div className={css.containerUserMenu}>
+          <div className={css.containerUserInfo}>
+            <div className={css.userAvatar}>
+              {user?.name ? user.name.charAt(0).toUpperCase() : "U"}
+            </div>
+            <p className={css.userName}>{user?.name || "User Name"}</p>
+          </div>
+
+          <button className={css.burgerMenu} type="button">
+            <BurgerMenuIcon className={css.burgerMenuIcon} />
+          </button>
+
+          <button
+            className={css.logoutButton}
+            type="button"
+            onClick={async () => {
+              await dispatch(logoutThunk()).unwrap();
+              navigate("/login");
+            }}
+          >
+            Log out
+          </button>
+        </div>
       </header>
 
       <main>

@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f1f1f;
+  padding: 11px 20px;
+  border-radius: 15px;
+}
+
+.mainLogoIcon {
+  width: 42px;
+  height: 17px;
+}
+
+.containerUserMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.containerUserInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.mainLogoText,
+.nav,
+.logoutButton,
+.userName {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+
+  .logoutButton {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mainLogoText {
+    display: block;
+  }
+
+  .userName {
+    display: block;
+  }
+}
