@@ -119,6 +119,17 @@ const Layout = () => {
                 </NavLink>
               </li>
             </ul>
+
+            <button
+              className={css.logoutMobileButton}
+              type="button"
+              onClick={async () => {
+                await dispatch(logoutThunk()).unwrap();
+                navigate("/login");
+              }}
+            >
+              Log out
+            </button>
           </div>
         </div>
       )}
