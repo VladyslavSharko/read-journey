@@ -3,13 +3,14 @@ import css from "./Layout.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../redux/auth/selectors";
 import { logoutThunk, refreshUserThunk } from "../../redux/auth/operations";
-import { useEffect } from "react";
-import { BurgerMenuIcon } from "../Icons";
+import { useEffect, useState } from "react";
+import { BurgerMenuIcon, CloseBtnIcon } from "../Icons";
 
 const Layout = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     dispatch(refreshUserThunk());
@@ -27,12 +28,22 @@ const Layout = () => {
         <nav className={css.nav}>
           <ul className={css.navList}>
             <li className={css.navListItem}>
-              <NavLink className={css.navLink} to="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? `${css.navLink} ${css.active}` : css.navLink
+                }
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink className={css.navLink} to="/library">
+              <NavLink
+                to="/library"
+                className={({ isActive }) =>
+                  isActive ? `${css.navLink} ${css.active}` : css.navLink
+                }
+              >
                 Library
               </NavLink>
             </li>
@@ -46,7 +57,11 @@ const Layout = () => {
             <p className={css.userName}>{user?.name || "User Name"}</p>
           </div>
 
-          <button className={css.burgerMenu} type="button">
+          <button
+            className={css.burgerMenu}
+            type="button"
+            onClick={() => setIsModalOpen(true)}
+          >
             <BurgerMenuIcon className={css.burgerMenuIcon} />
           </button>
 
@@ -66,6 +81,47 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
+
+      {isModalOpen && (
+        <div className={css.backdrop} onClick={() => setIsModalOpen(false)}>
+          <div className={css.modal} onClick={(e) => e.stopPropagation()}>
+            <button
+              className={css.closeButtun}
+              type="button"
+              onClick={() => setIsModalOpen(false)}
+            >
+              <CloseBtnIcon className={css.closeBtnIcon} />
+            </button>
+
+            <ul className={css.modalNavList}>
+              <li className={css.modalNavItem}>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${css.modalNavLink} ${css.activeModal}`
+                      : css.modalNavLink
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className={css.modalNavItem}>
+                <NavLink
+                  to="/library"
+                  className={({ isActive }) =>
+                    isActive
+                      ? `${css.modalNavLink} ${css.activeModal}`
+                      : css.modalNavLink
+                  }
+                >
+                  Library
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

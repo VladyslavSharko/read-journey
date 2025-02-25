@@ -32,6 +32,9 @@
   border-radius: 50%;
   width: 35px;
   height: 35px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .mainLogoText,
@@ -39,6 +42,71 @@
 .logoutButton,
 .userName {
   display: none;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background-color: #262626;
+  top: 0;
+  right: 0;
+}
+
+.closeBtnIcon {
+  position: absolute;
+  top: 34px;
+  right: 40px;
+}
+
+.modalNavList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 280px;
+  margin-left: 70px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.modalNavLink {
+  color: #686868;
+  transition: all 0.3s ease;
+}
+
+.modalNavLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 3px;
+  background-color: #4f92f7;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.activeModal {
+  position: relative;
+  color: #f9f9f9;
+}
+
+.activeModal::after {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
