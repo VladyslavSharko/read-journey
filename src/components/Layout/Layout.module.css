@@ -62,7 +62,6 @@
   background-color: #262626;
   top: 0;
   right: 0;
-  /* padding-bottom: 40px; */
 }
 
 .closeBtnIcon {
@@ -131,12 +130,77 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    padding: 16px;
+    justify-content: flex-start;
+  }
+
   .nav {
     display: block;
+    margin-left: 223px;
+  }
+
+  .navList {
+    display: flex;
+    gap: 32px;
+  }
+
+  .navListItem {
+    font-weight: 500;
+    line-height: 1.13;
+    letter-spacing: -0.02em;
+  }
+
+  .navLink {
+    color: #686868;
+    transition: all 0.3s ease;
+  }
+
+  .navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background-color: #4f92f7;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .active {
+    position: relative;
+    color: #f9f9f9;
+  }
+
+  .active::after {
+    opacity: 1;
+  }
+
+  .containerUserMenu {
+    margin-right: 0;
+    margin-left: auto;
   }
 
   .logoutButton {
     display: block;
+    font-weight: 700;
+    line-height: 1.13;
+    border: 1px solid rgba(249, 249, 249, 0.2);
+    padding: 12px 28px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .logoutButton:hover {
+    background-color: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    color: #1f1f1f;
+  }
+
+  .burgerMenu {
+    display: none;
   }
 }
 
