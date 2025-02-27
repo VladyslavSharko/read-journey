@@ -1,5 +1,9 @@
+import Dashboard from "../components/Dashboard/Dashboard";
+
 const RecommendedPage = () => {
-  return <div>Recommended</div>;
+  return <div>
+    <Dashboard/>
+  </div>;
 };
 
 export default RecommendedPage;

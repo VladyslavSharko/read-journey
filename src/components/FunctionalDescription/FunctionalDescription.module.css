@@ -1,0 +1,67 @@
+.functionalDescription {
+  margin-top: 20px;
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.functionalDescriptionTitle {
+  color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.functionalDescriptionList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+.functionalDescriptionItem {
+  display: flex;
+  gap: 12px;
+}
+
+.descriptionText {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.descriptionTextSpan {
+  color: #686868;
+}
+
+.descriptionOrderNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f9f9f9;
+  color: #1f1f1f;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.toLibraryWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.toLibraryText {
+  color: #686868;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+}

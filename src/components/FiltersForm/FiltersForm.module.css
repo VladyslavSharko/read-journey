@@ -1,0 +1,42 @@
+.filtersTitle {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  margin-left: 14px;
+}
+
+.filtersInput {
+  width: 100%;
+  background-color: #262626;
+  border-radius: 12px;
+  border: none;
+  padding: 14px;
+  color: #f9f9f9;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+}
+
+.filtersInputAuthor {
+  margin-top: 8px;
+}
+
+.filtersButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  transition: all 0.3s ease;
+}
+
+.filtersButton:hover {
+  color: #1f1f1f;
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+}
