@@ -14,7 +14,6 @@ const Recommended = () => {
   const books = useSelector(selectBooks);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(2);
 

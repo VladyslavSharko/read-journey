@@ -34,8 +34,8 @@
 
 .recommendedList {
   display: flex;
+  justify-content: space-between;
   margin-top: 22px;
-  gap: 20px;
 }
 
 .recommendedItem {
@@ -55,6 +55,7 @@
   font-weight: 700;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  margin-top: 8px;
 }
 
 .bookAuthor {
@@ -63,4 +64,39 @@
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .recommended {
+    padding: 32px;
+    margin-top: 16px;
+  }
+
+  .recommendedTitle {
+    font-size: 28px;
+    line-height: 1.14;
+  }
+
+  .paginationButton {
+    width: 42px;
+    height: 42px;
+  }
+
+  .paginationIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .recommendedList {
+    margin-top: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: calc((100% - 4 * 137px) / 3);
+    row-gap: 27px;
+  }
+
+  .recommendedItem {
+    width: 137px;
+    cursor: pointer;
+  }
 }

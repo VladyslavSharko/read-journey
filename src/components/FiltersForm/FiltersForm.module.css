@@ -1,4 +1,5 @@
 .filtersTitle {
+  width: 100%;
   font-size: 10px;
   font-weight: 500;
   line-height: 1.2;
@@ -39,4 +40,27 @@
   color: #1f1f1f;
   background-color: #f9f9f9;
   border: 1px solid #f9f9f9;
+}
+
+@media screen and (min-width: 768px) {
+  .filterForm {
+    width: 50%;
+  }
+
+  .filtersTitle {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .filtersInput {
+    padding: 16px 14px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .filtersButton {
+    padding: 10px 28px;
+    font-size: 16px;
+    line-height: 1.13;
+  }
 }
