@@ -2,8 +2,8 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import css from "./Layout.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../redux/auth/selectors";
-import { logoutThunk, refreshUserThunk } from "../../redux/auth/operations";
-import { useEffect, useState } from "react";
+import { logoutThunk } from "../../redux/auth/operations";
+import { useState } from "react";
 import { BurgerMenuIcon, CloseBtnIcon } from "../Icons";
 
 const Layout = () => {
@@ -11,10 +11,6 @@ const Layout = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    dispatch(refreshUserThunk());
-  }, [dispatch]);
 
   return (
     <div className={css.layout}>

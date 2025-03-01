@@ -3,7 +3,6 @@ import {
   getMeThunk,
   loginThunk,
   logoutThunk,
-  refreshUserThunk,
   registerThunk,
 } from "./operations";
 
@@ -35,10 +34,6 @@ const slice = createSlice({
         state.isLoggedIn = true;
         state.user.name = action.payload.name;
         state.user.email = action.payload.email;
-      })
-      .addCase(refreshUserThunk.fulfilled, (state, action) => {
-        state.user = action.payload;
-        state.isLoggedIn = true;
       })
       .addCase(logoutThunk.fulfilled, () => {
         localStorage.removeItem("token");

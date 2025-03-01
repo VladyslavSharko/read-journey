@@ -35,7 +35,6 @@ const LoginForm = () => {
   const onSubmit = async (data) => {
     try {
       dispatch(loginThunk(data));
-      console.log(data);
 
       toast.success("Login successful!");
       navigate("/");

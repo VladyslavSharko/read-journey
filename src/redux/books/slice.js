@@ -19,7 +19,7 @@ const booksSlice = createSlice({
       })
       .addCase(fetchRecommendedBooks.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.items = action.payload;
+        state.items = action.payload.results;
       })
       .addCase(fetchRecommendedBooks.rejected, (state, action) => {
         state.isLoading = false;

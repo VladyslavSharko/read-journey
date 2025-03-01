@@ -49,20 +49,3 @@ export const getMeThunk = createAsyncThunk("getMe", async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-
-export const refreshUserThunk = createAsyncThunk(
-  "auth/refreshUser",
-  async (_, thunkAPI) => {
-    try {
-      const state = thunkAPI.getState();
-      const token = state.auth.token;
-      if (!token) return thunkAPI.rejectWithValue("No token");
-
-      api.defaults.headers.common.Authorization = `Bearer ${token}`;
-      const { data } = await api.get("/users/current/refresh");
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
