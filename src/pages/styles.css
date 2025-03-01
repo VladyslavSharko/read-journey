@@ -5,3 +5,11 @@
     gap: 16px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .recommendedPage {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}

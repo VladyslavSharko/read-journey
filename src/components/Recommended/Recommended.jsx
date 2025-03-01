@@ -15,24 +15,23 @@ const Recommended = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(2);
+
+  const [limit, setLimit] = useState(() => {
+    if (window.innerWidth >= 1280) return 10;
+    if (window.innerWidth >= 768) return 8;
+    return 2;
+  });
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1280) {
-        setLimit(10);
-      } else if (window.innerWidth >= 768) {
-        setLimit(8);
-      } else {
-        setLimit(2);
-      }
+      if (window.innerWidth >= 1280) setLimit(10);
+      else if (window.innerWidth >= 768) setLimit(8);
+      else setLimit(2);
     };
 
-    handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => {
-      removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -53,6 +52,8 @@ const Recommended = () => {
     setPage(page + 1);
   };
 
+  const isNextDisabled = books.length < limit;
+
   return (
     <div className={css.recommended}>
       <div className={css.titlePaginationWrapper}>
@@ -63,7 +64,7 @@ const Recommended = () => {
             className={css.paginationButton}
             type="button"
             onClick={handlePreviousPage}
-            disabled={books.length < limit}
+            disabled={page === 1}
           >
             <PaginationLeftIcon className={css.paginationIcon} />
           </button>
@@ -72,7 +73,7 @@ const Recommended = () => {
             className={css.paginationButton}
             type="button"
             onClick={handleNextPage}
-            disabled={books.length < limit}
+            disabled={isNextDisabled}
           >
             <PaginationRightIcon className={css.paginationIcon} />
           </button>

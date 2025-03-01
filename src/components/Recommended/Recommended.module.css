@@ -100,3 +100,15 @@
     cursor: pointer;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .recommended {
+    padding: 40px;
+    margin-top: 0;
+  }
+
+  .recommendedList {
+    gap: calc((100% - 5 * 137px) / 4);
+    row-gap: 27px;
+  }
+}

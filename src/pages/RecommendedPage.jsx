@@ -3,7 +3,7 @@ import Recommended from "../components/Recommended/Recommended";
 
 const RecommendedPage = () => {
   return (
-    <div>
+    <div className="recommendedPage">
       <Dashboard />
       <Recommended />
     </div>
