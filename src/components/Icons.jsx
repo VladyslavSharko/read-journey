@@ -415,7 +415,7 @@ export const DeleteBtnIcon = () => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const PaginationRightIcon = ({ className }) => {
+export const PaginationRightIcon = ({ className, stroke }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -427,7 +427,8 @@ export const PaginationRightIcon = ({ className }) => {
     >
       <path
         d="M6 4L10 8L6 12"
-        stroke="#F9F9F9"
+        // stroke="#F9F9F9"
+        stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -437,7 +438,7 @@ export const PaginationRightIcon = ({ className }) => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const PaginationLeftIcon = ({ className }) => {
+export const PaginationLeftIcon = ({ className, stroke }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -449,7 +450,7 @@ export const PaginationLeftIcon = ({ className }) => {
     >
       <path
         d="M10 12L6 8L10 4"
-        stroke="#F9F9F9"
+        stroke={stroke}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

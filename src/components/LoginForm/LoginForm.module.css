@@ -49,6 +49,10 @@
   outline: none;
 }
 
+.loginInput:focus {
+  outline: 1px solid rgba(249, 249, 249, 0.1);
+}
+
 .loginInputError {
   border: 1px solid #e90516;
 }
@@ -130,10 +134,6 @@
     width: 100%;
     padding: 16px 14px;
     font-size: 14px;
-  }
-
-  .loginInput:focus {
-    outline: 1px solid rgba(249, 249, 249, 0.1);
   }
 
   .buttonWrapper {

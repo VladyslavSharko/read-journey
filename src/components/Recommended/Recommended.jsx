@@ -66,7 +66,11 @@ const Recommended = () => {
             onClick={handlePreviousPage}
             disabled={page === 1}
           >
-            <PaginationLeftIcon className={css.paginationIcon} />
+            <PaginationLeftIcon
+              className={`${css.paginationIcon} ${
+                page === 1 ? css.paginationIconDisabled : ""
+              }`}
+            />
           </button>
 
           <button
@@ -75,7 +79,11 @@ const Recommended = () => {
             onClick={handleNextPage}
             disabled={isNextDisabled}
           >
-            <PaginationRightIcon className={css.paginationIcon} />
+            <PaginationRightIcon
+              className={`${css.paginationIcon} ${
+                isNextDisabled ? css.paginationIconDisabled : ""
+              }`}
+            />
           </button>
         </div>
       </div>

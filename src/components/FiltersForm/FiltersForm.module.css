@@ -15,10 +15,15 @@
   border: none;
   padding: 14px;
   color: #f9f9f9;
+  outline: none;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: -0.02em;
+}
+
+.filtersInput:focus {
+  outline: 1px solid rgba(249, 249, 249, 0.1);
 }
 
 .filtersInputAuthor {

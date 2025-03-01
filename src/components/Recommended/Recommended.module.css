@@ -32,6 +32,20 @@
   border-radius: 50%;
 }
 
+.paginationButton:disabled {
+  cursor: default;
+}
+
+.paginationIcon {
+  stroke: #f9f9f9;
+  width: 16px;
+  height: 16px;
+}
+
+.paginationIconDisabled {
+  opacity: 0.2;
+}
+
 .recommendedList {
   display: flex;
   justify-content: space-between;
@@ -56,6 +70,9 @@
   line-height: 1.29;
   letter-spacing: -0.02em;
   margin-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bookAuthor {
