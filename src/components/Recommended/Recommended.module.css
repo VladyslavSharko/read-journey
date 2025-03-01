@@ -1,0 +1,59 @@
+.recommended {
+  padding: 40px 20px;
+  background-color: #1f1f1f;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+.titlePaginationWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommendedTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.paginationButtonsWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.paginationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 50%;
+}
+
+.recommendedList {
+  display: flex;
+  margin-top: 22px;
+  gap: 20px;
+}
+
+.recommendedItemImg {
+  width: calc((100% - 20px) / 2);
+  height: 208px;
+}
+
+.bookTitle {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.bookAuthor {
+  color: #686868;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}

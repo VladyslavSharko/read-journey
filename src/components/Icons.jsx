@@ -1,5 +1,3 @@
-
-
 export const MainLogoIcon = () => {
   return (
     <div>
@@ -413,5 +411,49 @@ export const DeleteBtnIcon = () => {
         />
       </svg>
     </div>
+  );
+};
+
+// eslint-disable-next-line react/prop-types
+export const PaginationRightIcon = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M6 4L10 8L6 12"
+        stroke="#F9F9F9"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+// eslint-disable-next-line react/prop-types
+export const PaginationLeftIcon = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M10 12L6 8L10 4"
+        stroke="#F9F9F9"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 };
