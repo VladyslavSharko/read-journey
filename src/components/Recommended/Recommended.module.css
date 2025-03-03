@@ -122,6 +122,7 @@
   .recommended {
     padding: 40px;
     margin-top: 0;
+    min-width: 871px;
   }
 
   .recommendedList {
