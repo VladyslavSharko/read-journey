@@ -1,16 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchRecommendedBooks } from "./operations";
+import { selectBooks, selectFilter } from "./selectors";
 
 const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  filter: {
+    title: "",
+    author: "",
+  },
 };
 
 const booksSlice = createSlice({
   name: "books",
   initialState,
-  reducers: {},
+  reducers: {
+    setFilter(state, action) {
+      state.filter = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRecommendedBooks.pending, (state) => {
@@ -28,4 +37,16 @@ const booksSlice = createSlice({
   },
 });
 
+export const selectFilteredBooks = createSelector(
+  [selectBooks, selectFilter],
+  (books, filter) => {
+    return books.filter(
+      (book) =>
+        book.title.toLowerCase().includes(filter.title.toLowerCase()) &&
+        book.author.toLowerCase().includes(filter.author.toLowerCase())
+    );
+  }
+);
+
+export const { setFilter } = booksSlice.actions;
 export const booksReducer = booksSlice.reducer;

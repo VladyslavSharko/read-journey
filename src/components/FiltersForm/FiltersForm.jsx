@@ -1,24 +1,42 @@
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { setFilter as setFilterRedux } from "../../redux/books/slice";
+import { useState } from "react";
 
 import css from "./FiltersForm.module.css";
 
-const FiltersForm = ({ onFilter }) => {
-  const { register, handleSubmit } = useForm();
+const FiltersForm = () => {
+  const dispatch = useDispatch();
+  const [localFilter, setLocalFilter] = useState({ title: "", author: "" });
+
+  const { register, handleSubmit, watch } = useForm({
+    defaultValues: localFilter,
+  });
+
+  const title = watch("title");
+  const author = watch("author");
+
+  const handleChange = () => {
+    const updatedFilter = { title, author };
+    setLocalFilter(updatedFilter);
+    dispatch(setFilterRedux(updatedFilter));
+  };
+
   const onSubmit = (data) => {
-    onFilter(data);
+    dispatch(setFilterRedux(data));
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={css.filterForm}>
       <p className={css.filtersTitle}>Filters:</p>
       <input
-        {...register("title")}
+        {...register("title", { onChange: handleChange })}
         placeholder="Book title:"
         className={css.filtersInput}
       />
       <input
-        {...register("author")}
+        {...register("author", { onChange: handleChange })}
         placeholder="The author:"
         className={`${css.filtersInput} ${css.filtersInputAuthor}`}
       />
@@ -30,7 +48,7 @@ const FiltersForm = ({ onFilter }) => {
 };
 
 FiltersForm.propTypes = {
-  onFilter: PropTypes.func.isRequired,
+  onFilter: PropTypes.func,
 };
 
 export default FiltersForm;

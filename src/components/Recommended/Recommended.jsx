@@ -3,15 +3,12 @@ import { PaginationLeftIcon, PaginationRightIcon } from "../Icons";
 import css from "./Recommended.module.css";
 import { fetchRecommendedBooks } from "../../redux/books/operations";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectBooks,
-  selectError,
-  selectIsLoading,
-} from "../../redux/books/selectors";
+import { selectError, selectIsLoading } from "../../redux/books/selectors";
+import { selectFilteredBooks } from "../../redux/books/slice";
 
 const Recommended = () => {
   const dispatch = useDispatch();
-  const books = useSelector(selectBooks);
+  const books = useSelector(selectFilteredBooks);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const [page, setPage] = useState(1);

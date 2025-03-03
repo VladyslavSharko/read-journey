@@ -1,5 +1,9 @@
+import Dashboard from "../components/Dashboard/Dashboard";
+
 const MyLibraryPage = () => {
-  return <div>LibraryPage</div>;
+  return <div>
+    <Dashboard/>
+  </div>;
 };
 
 export default MyLibraryPage;
