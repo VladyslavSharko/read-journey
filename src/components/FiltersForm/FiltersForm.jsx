@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { setFilter as setFilterRedux } from "../../redux/books/slice";
 import { useState } from "react";
 
+import { setFilter as setFilterRedux } from "../../redux/books/slice";
 import css from "./FiltersForm.module.css";
 
 const FiltersForm = () => {

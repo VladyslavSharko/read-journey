@@ -1,0 +1,78 @@
+.filtersTitle {
+  width: 100%;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  margin-left: 14px;
+}
+
+.filtersInput {
+  width: 100%;
+  background-color: #262626;
+  border-radius: 12px;
+  border: none;
+  padding: 14px;
+  color: #f9f9f9;
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.filtersInput:focus {
+  outline: 1px solid rgba(249, 249, 249, 0.1);
+}
+
+.filtersInputAuthor {
+  margin-bottom: 0;
+}
+
+.submitButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  color: #1f1f1f;
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+}
+
+@media screen and (min-width: 768px) {
+  .filterForm {
+    width: 50%;
+  }
+
+  .filtersTitle {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .filtersInput {
+    padding: 16px 14px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .submitButton {
+    padding: 10px 28px;
+    font-size: 16px;
+    line-height: 1.13;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .filterForm {
+    width: 100%;
+  }
+}
