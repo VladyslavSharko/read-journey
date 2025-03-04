@@ -83,6 +83,85 @@
   letter-spacing: -0.02em;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modalBook {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 335px;
+  padding: 40px 20px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.closeIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.modalBookImg {
+  width: 140px;
+  height: 213px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modalBookTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.modalBookAuthor {
+  color: #686868;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.modalBookPages {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+}
+
+.addLibraryButton {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .recommended {
     padding: 32px;
@@ -115,6 +194,54 @@
   .recommendedItem {
     width: 137px;
     cursor: pointer;
+  }
+
+
+
+
+  
+  .modalBookImg {
+    width: 153px;
+height: 233px;
+  }
+  
+  .modalBookTitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .modalBookAuthor {
+    color: #686868;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  
+  .modalBookPages {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-top: 4px;
+  }
+  
+  .addLibraryButton {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: 1px solid rgba(249, 249, 249, 0.2);
+    border-radius: 30px;
   }
 }
 

@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
-import { PaginationLeftIcon, PaginationRightIcon } from "../Icons";
+import {
+  CloseBtnIcon,
+  PaginationLeftIcon,
+  PaginationRightIcon,
+} from "../Icons";
 import css from "./Recommended.module.css";
 import { fetchRecommendedBooks } from "../../redux/books/operations";
 import { useDispatch, useSelector } from "react-redux";
@@ -64,9 +68,8 @@ const Recommended = () => {
             disabled={page === 1}
           >
             <PaginationLeftIcon
-              className={`${css.paginationIcon} ${
-                page === 1 ? css.paginationIconDisabled : ""
-              }`}
+              className={`${css.paginationIcon} ${page === 1 ? css.paginationIconDisabled : ""
+                }`}
             />
           </button>
 
@@ -77,9 +80,8 @@ const Recommended = () => {
             disabled={isNextDisabled}
           >
             <PaginationRightIcon
-              className={`${css.paginationIcon} ${
-                isNextDisabled ? css.paginationIconDisabled : ""
-              }`}
+              className={`${css.paginationIcon} ${isNextDisabled ? css.paginationIconDisabled : ""
+                }`}
             />
           </button>
         </div>
@@ -99,6 +101,23 @@ const Recommended = () => {
             </li>
           ))}
       </ul>
+
+      <div className={css.backdrop}>
+        <div className={css.modalBook}>
+          <button className={css.closeBtn} type="button">
+            <CloseBtnIcon className={css.closeIcon} />
+          </button>
+
+          <img className={css.modalBookImg} src="" alt="Book" />
+          <h4 className={css.modalBookTitle}>Book Title</h4>
+          <p className={css.modalBookAuthor}>Book Author</p>
+          <p className={css.modalBookPages}>Book pages</p>
+
+          <button className={css.addLibraryButton} type="button">
+            Add to library
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

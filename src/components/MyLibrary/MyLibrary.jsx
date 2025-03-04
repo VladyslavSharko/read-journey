@@ -1,6 +1,7 @@
 import { Dropdown } from "../Dropdown/Dropdown";
 import books from "../../assets/images/books@2x.png";
 import css from "./MyLibrary.module.css";
+// import { DeleteBtnIcon } from "../Icons";
 
 const MyLibrary = () => {
   return (
@@ -20,6 +21,21 @@ const MyLibrary = () => {
           from the recommended ones
         </p>
       </div>
+
+      {/* <ul className={css.addedBooksList}>
+        <li className={css.addedBooksItem}>
+          <img className={css.bookImg} src="" alt="Book" />
+          <div className={css.containerBookInfo}>
+            <div className={css.subcontainerBookInfo}>
+              <h3 className={css.bookInfoTitle}>Book Title</h3>
+              <p className={css.bookInfoAuthor}>Book Author</p>
+            </div>
+            <button type="button" className={css.deleteBtnContainer}>
+              <DeleteBtnIcon />
+            </button>
+          </div>
+        </li>
+      </ul> */}
     </div>
   );
 };
