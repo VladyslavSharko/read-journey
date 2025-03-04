@@ -55,3 +55,37 @@
 .libraryTextSpan {
   color: #686868;
 }
+
+@media screen and (min-width: 768px) {
+  .myLibrary {
+    padding: 40px;
+    margin-top: 16px;
+  }
+
+  .myLibraryTitle {
+    color: #f9f9f9;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.14;
+  }
+
+  .emptyMyLibrary {
+    margin-top: 86px;
+    margin-bottom: 120px;
+  }
+
+  .booksImgWrapper {
+    width: 130px;
+    height: 130px;
+  }
+
+  .booksimg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .emptyLibraryText {
+    max-width: 274px;
+    margin-top: 20px;
+  }
+}

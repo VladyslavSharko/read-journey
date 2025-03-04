@@ -46,35 +46,3 @@ const RecommendedBooks = () => {
 };
 
 export default RecommendedBooks;
-
-// import { NavLink } from "react-router-dom";
-// import { ArrowIcon } from "../Icons";
-// import css from "./RecommendedBooks.module.css";
-
-// const RecommendedBooks = () => {
-//   return (
-//     <div className={css.recommendedBooks}>
-//       <h3 className={css.recommendedBooksTitle}>Recommended books</h3>
-
-//       <ul className={css.recommendedBooksList}>
-//         <li className={css.recommendedBooksItem}>
-//           <img className={css.bookImg} src="" alt="Book" />
-//           <h4 className={css.bookTitle}>Book Title</h4>
-//           <p className={css.bookAuthor}>Book Author</p>
-//         </li>
-//       </ul>
-
-//       <div className={css.toHomeContainer}>
-//         <NavLink to="/">
-//           <p className={css.toHomeText}>Home</p>
-//         </NavLink>
-
-//         <NavLink to="/">
-//           <ArrowIcon className={css.toHomeIcon} />
-//         </NavLink>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default RecommendedBooks;

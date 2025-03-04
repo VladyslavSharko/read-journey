@@ -34,7 +34,7 @@ const FilterFormLibrary = () => {
           placeholder="Number of pages:"
         />
 
-        <button type="submit" className={css.submitButton}>
+        <button type="submit" className={css.addButton}>
           Add Book
         </button>
       </form>

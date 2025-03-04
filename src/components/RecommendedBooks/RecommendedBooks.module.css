@@ -64,3 +64,37 @@
   letter-spacing: -0.02em;
   text-decoration-line: underline;
 }
+
+.toHomeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .recommendedBooks {
+    width: 50%;
+    padding: 26px 20px;
+    margin-top: 0;
+  }
+
+  .recommendedBooksTitle {
+    font-size: 20px;
+  }
+
+  .recommendedBooksList {
+    margin-top: 20px;
+  }
+
+  .toHomeContainer {
+    margin-top: 14px;
+  }
+
+  .toHomeText {
+    font-size: 14px;
+  }
+
+  .toHomeIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
