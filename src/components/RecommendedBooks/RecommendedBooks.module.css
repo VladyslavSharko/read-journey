@@ -98,3 +98,12 @@
     height: 24px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .recommendedBooks {
+    width: 100%;
+    padding: 26px 20px;
+    margin-top: 0;
+    margin-top: 58px;
+  }
+}

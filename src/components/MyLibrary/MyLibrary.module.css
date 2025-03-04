@@ -89,3 +89,16 @@
     margin-top: 20px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .myLibrary {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .emptyMyLibrary {
+    margin-top: 147px;
+    margin-bottom: 192px;
+  }
+
+}
