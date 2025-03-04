@@ -119,6 +119,7 @@
 .modalBookImg {
   width: 140px;
   height: 213px;
+  border-radius: 8px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -196,52 +197,33 @@
     cursor: pointer;
   }
 
+  .modalBook {
+    width: 500px;
+    max-width: none;
+    background-color: #1f1f1f;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+  }
 
-
-
-  
   .modalBookImg {
     width: 153px;
-height: 233px;
+    height: 233px;
   }
-  
+
   .modalBookTitle {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    margin-top: 16px;
-    text-align: center;
+    font-size: 20px;
   }
-  
+
   .modalBookAuthor {
-    color: #686868;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-    text-align: center;
-  }
-  
-  .modalBookPages {
-    text-align: center;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    margin-top: 4px;
-  }
-  
-  .addLibraryButton {
     font-size: 14px;
-    font-weight: 700;
     line-height: 1.29;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20px;
-    padding: 12px 24px;
-    border: 1px solid rgba(249, 249, 249, 0.2);
-    border-radius: 30px;
+  }
+
+  .addLibraryButton {
+    font-size: 16px;
+    line-height: 1.13;
+    margin-top: 32px;
+    padding: 14px 28px;
   }
 }
 
