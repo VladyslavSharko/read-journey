@@ -154,6 +154,16 @@
     max-width: 274px;
     margin-top: 20px;
   }
+
+  .addedBooksList {
+    justify-content: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .addedBooksItem {
+    width: calc((100% - 3 * 25px) / 4);
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -164,5 +174,9 @@
 
   .emptyMyLibrary {
     margin-top: 147px;
+  }
+
+  .addedBooksItem {
+    width: calc((100% - 4 * 25px) / 5);
   }
 }
