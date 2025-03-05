@@ -63,6 +63,26 @@
 }
 
 .containerBookInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subcontainerBookInfo {
+  overflow: hidden;
+}
+
+.bookInfoTitle {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addedBooksItem {
+  width: calc((100% - 20px) / 2);
+}
+
+.containerBookInfo {
   margin-top: 8px;
   display: flex;
   gap: 14px;

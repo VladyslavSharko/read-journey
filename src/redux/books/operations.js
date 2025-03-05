@@ -31,10 +31,26 @@ export const removeFromLibrary = createAsyncThunk(
   "removeBookFromLibrary",
   async ({ id }, thunkAPI) => {
     try {
+      console.log(`Sending DELETE request to /books/remove/${id}`); // Лог для перевірки запиту
       const { data } = await api.delete(`/books/remove/${id}`);
+      console.log("API Response Data:", data); // Лог для перевірки відповіді
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      console.error("Error deleting book:", error); // Лог для помилки
+      return thunkAPI.rejectWithValue(error.message); // Повідомлення про помилку
     }
   }
 );
+
+
+// export const removeFromLibrary = createAsyncThunk(
+//   "removeBookFromLibrary",
+//   async ({ id }, thunkAPI) => {
+//     try {
+//       const { data } = await api.delete(`/books/remove/${id}`);
+//       return data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
