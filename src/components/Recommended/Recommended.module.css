@@ -103,6 +103,7 @@
   padding: 40px 20px;
   background-color: #1f1f1f;
   border-radius: 12px;
+  border: 1px solid rgba(104, 104, 104, 0.2);
 }
 
 .closeBtn {
@@ -161,6 +162,60 @@
   padding: 12px 24px;
   border: 1px solid rgba(249, 249, 249, 0.2);
   border-radius: 30px;
+}
+
+.modalConfirm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 335px;
+  padding: 60px 46px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  border: 1px solid rgba(104, 104, 104, 0.2);
+}
+
+.confirmImg {
+  width: 50px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.confirmTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+}
+
+.confirmMessage {
+  color: #686868;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  margin-top: 10px;
+}
+
+.confirmMessageSpan {
+  color: #f9f9f9;
+}
+
+.confirmCloseButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.closeIcon {
+  width: 22px;
+  height: 22px;
 }
 
 @media screen and (min-width: 768px) {
@@ -224,6 +279,29 @@
     line-height: 1.13;
     margin-top: 32px;
     padding: 14px 28px;
+  }
+
+  .modalConfirm {
+    max-width: none;
+    width: 342px;
+    background-color: #1f1f1f;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+  }
+
+  .confirmImg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .confirmTitle {
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 32px;
+  }
+
+  .confirmMessage {
+    margin-top: 14px;
   }
 }
 
