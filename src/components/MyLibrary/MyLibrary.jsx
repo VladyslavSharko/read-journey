@@ -5,10 +5,12 @@ import { DeleteBtnIcon } from "../Icons";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAddBook } from "../../redux/books/selectors";
 import { removeFromLibrary } from "../../redux/books/operations";
+import { useState } from "react";
 
 const MyLibrary = () => {
   const dispatch = useDispatch();
   const libraryBooks = useSelector(selectAddBook);
+  const [modal, setModal] = useState(false);
 
   const removeBook = (id) => {
     if (id) {
@@ -16,6 +18,14 @@ const MyLibrary = () => {
     } else {
       console.error("Book ID is undefined!");
     }
+  };
+
+  const openModal = () => {
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModal(false);
   };
 
   return (
@@ -44,6 +54,7 @@ const MyLibrary = () => {
                 className={css.bookImg}
                 src={book.imageUrl}
                 alt={book.title}
+                onClick={openModal}
               />
               <div className={css.containerBookInfo}>
                 <div className={css.subcontainerBookInfo}>
@@ -61,6 +72,20 @@ const MyLibrary = () => {
             </li>
           ))}
         </ul>
+      )}
+
+      {modal && (
+        <div className={css.backdrop} onClick={closeModal}>
+          <div className={css.modalStartReading}>
+            <img className={css.startBookimg} src="" alt="Book" />
+            <h3 className={css.bookTitle}>Book Title</h3>
+            <p className={css.bookAuthor}>Author Name</p>
+            <p className={css.bookPages}>pages</p>
+            <button className={css.startReadingButton} type="button">
+              Start reading
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );
