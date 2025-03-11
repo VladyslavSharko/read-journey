@@ -16,8 +16,6 @@ const Layout = () => {
     dispatch(getUserThunk());
   }, [dispatch]);
 
-  console.log(user);
-
   return (
     <div className={css.layout}>
       <header className={css.header}>

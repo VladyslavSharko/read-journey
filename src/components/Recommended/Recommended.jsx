@@ -12,7 +12,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { selectError, selectIsLoading } from "../../redux/books/selectors";
 import { selectFilteredBooks } from "../../redux/books/slice";
-import thumbUp from '../../assets/images/thumb-up.png'
+import thumbUp from "../../assets/images/thumb-up.png";
 
 const Recommended = () => {
   const dispatch = useDispatch();
@@ -119,7 +119,7 @@ const Recommended = () => {
           books.map((book) => (
             <li
               className={css.recommendedItem}
-              key={book.id}
+              key={book._id}
               onClick={() => openModal(book)}
             >
               <img
@@ -164,7 +164,7 @@ const Recommended = () => {
             className={css.modalConfirm}
             onClick={(e) => e.stopPropagation()}
           >
-            <img className={css.confirmImg} src={thumbUp} alt='ThumbUp' />
+            <img className={css.confirmImg} src={thumbUp} alt="ThumbUp" />
             <h3 className={css.confirmTitle}>Good job</h3>
 
             <p className={css.confirmMessage}>

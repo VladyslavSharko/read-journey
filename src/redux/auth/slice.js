@@ -11,7 +11,7 @@ const initialState = {
     email: "",
     name: "",
   },
-  token: localStorage.getItem("token"),
+  token: null,
   isLoggedIn: false,
 };
 
