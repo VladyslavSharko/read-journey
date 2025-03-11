@@ -17,7 +17,7 @@ const Layout = () => {
   }, [dispatch]);
 
   console.log(user);
-  
+
   return (
     <div className={css.layout}>
       <header className={css.header}>

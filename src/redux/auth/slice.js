@@ -32,8 +32,10 @@ const slice = createSlice({
       })
       .addCase(getUserThunk.fulfilled, (state, action) => {
         state.isLoggedIn = true;
-        state.user.name = action.payload.name;
-        state.user.email = action.payload.email;
+        state.user = {
+          email: action.payload.email || state.user.email,
+          name: action.payload.name || state.user.name,
+        };
       })
       .addCase(logoutThunk.fulfilled, () => {
         localStorage.removeItem("token");
