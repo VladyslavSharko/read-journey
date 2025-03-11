@@ -35,7 +35,7 @@ export const logoutThunk = createAsyncThunk("logout", async (_, thunkAPI) => {
   }
 });
 
-export const getMeThunk = createAsyncThunk("getMe", async (_, thunkAPI) => {
+export const getUserThunk = createAsyncThunk("getUser", async (_, thunkAPI) => {
   const savedToken = thunkAPI.getState().auth.token;
   if (savedToken === null) {
     return thunkAPI.rejectWithValue("Token is not exist!");

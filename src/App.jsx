@@ -7,7 +7,7 @@ import MyLibraryPage from "./pages/MyLibraryPage";
 import Layout from "./components/Layout/Layout";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getMeThunk } from "./redux/auth/operations";
+import { getUserThunk } from "./redux/auth/operations";
 import PrivateRoute from "./Routes/PrivateRoute";
 import PublicRoute from "./Routes/PublicRoute";
 
@@ -15,7 +15,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMeThunk());
+    dispatch(getUserThunk());
   }, [dispatch]);
 
   return (
