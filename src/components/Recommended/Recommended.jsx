@@ -146,7 +146,7 @@ const Recommended = () => {
             />
             <h4 className={css.modalBookTitle}>{modalData.title}</h4>
             <p className={css.modalBookAuthor}>{modalData.author}</p>
-            <p className={css.modalBookPages}>{modalData.pages} pages</p>
+            <p className={css.modalBookPages}>{modalData.totalPages} pages</p>
             <button
               className={css.addLibraryButton}
               type="button"

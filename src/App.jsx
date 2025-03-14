@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { getUserThunk } from "./redux/auth/operations";
 import PrivateRoute from "./Routes/PrivateRoute";
 import PublicRoute from "./Routes/PublicRoute";
+import ReadingPage from "./pages/ReadingPage";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const App = () => {
             <Route index element={<RecommendedPage />} />
             <Route path="/recommended" element={<RecommendedPage />} />
             <Route path="/library" element={<MyLibraryPage />} />
+            <Route path="/reading" element={<ReadingPage />} />
           </Route>
         </Route>
       </Routes>

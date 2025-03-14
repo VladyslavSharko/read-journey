@@ -93,6 +93,7 @@
   height: 208px;
   border-radius: 8px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .bookInfoTitle {
@@ -150,6 +151,7 @@
   height: 213px;
   margin-right: auto;
   margin-left: auto;
+  border-radius: 8px;
 }
 
 .bookTitle {
