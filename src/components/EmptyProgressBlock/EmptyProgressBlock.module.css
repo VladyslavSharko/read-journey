@@ -1,0 +1,38 @@
+.emptyProgressBlock {
+  margin-top: 40px;
+}
+
+.emptyProgressTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.emptyProgressText {
+  color: #686868;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  margin-top: 14px;
+}
+
+.containerImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.starImg {
+  width: 32px;
+  height: 32px;
+}
