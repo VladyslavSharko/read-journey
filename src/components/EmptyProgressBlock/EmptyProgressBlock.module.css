@@ -36,3 +36,24 @@
   width: 32px;
   height: 32px;
 }
+
+@media screen and (min-width: 768px) {
+  .emptyProgressBlock {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .emptyProgressTitle {
+    font-size: 20px;
+  }
+
+  .containerImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .starImg {
+    width: 50px;
+    height: 50px;
+  }
+}

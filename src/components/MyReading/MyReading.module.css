@@ -55,3 +55,52 @@
   width: 40px;
   height: 40px;
 }
+
+@media screen and (min-width: 768px) {
+  .myReading {
+    margin-top: 16px;
+    padding: 40px 40px 25px 40px;
+  }
+
+  .myReadingTitle {
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  .bookContainer {
+    margin-top: 32px;
+    width: 317px;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: cover;
+  }
+
+  .bookImg {
+    width: 169px;
+    height: 256px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .bookTitle {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .bookAuthor {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+  }
+
+  .startButton {
+    margin-top: 16px;
+  }
+
+  .startIcon {
+    width: 50px;
+    height: 50px;
+  }
+}
