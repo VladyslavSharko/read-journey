@@ -104,3 +104,20 @@
     height: 50px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .myReading {
+    margin-top: 0;
+    padding: 40px;
+    width: 847px;
+  }
+
+  .bookContainer {
+    margin-top: 44px;
+  }
+
+  .bookImg {
+    width: 224px;
+    height: 340px;
+  }
+}

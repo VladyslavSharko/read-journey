@@ -3,7 +3,7 @@ import MyReading from "../components/MyReading/MyReading";
 
 const ReadingPage = () => {
   return (
-    <div>
+    <div className="readingPage">
       <Dashboard />
       <MyReading />
     </div>
