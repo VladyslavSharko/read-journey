@@ -39,3 +39,17 @@ export const removeFromLibrary = createAsyncThunk(
     }
   }
 );
+
+export const startReadingBook = createAsyncThunk(
+  "startReading",
+  async ({ id, page }, thunkAPI) => {
+    try {
+      const { data } = await api.post("/books/reading/start", { id, page });
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || error.message
+      );
+    }
+  }
+);
