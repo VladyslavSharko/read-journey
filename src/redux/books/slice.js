@@ -4,6 +4,7 @@ import {
   addToLibrary,
   removeFromLibrary,
   startReadingBook,
+  finishReadingBook,
 } from "./operations";
 
 const initialState = {
@@ -70,6 +71,22 @@ const booksSlice = createSlice({
       .addCase(startReadingBook.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+      .addCase(finishReadingBook.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(finishReadingBook.fulfilled, (state, action) => {
+        const index = state.items.findIndex(
+          (book) => book._id === action.payload._id
+        );
+        if (index !== -1) {
+          state.items[index] = {
+            ...state.items[index],
+            currentPage: action.payload.page,
+            isReading: false,
+          };
+        }
       });
   },
 });

@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { RecordIcon } from "../Icons";
 import css from "./MyReading.module.css";
 import { useDispatch } from "react-redux";
-import { startReadingBook } from "../../redux/books/operations";
+import { finishReadingBook, startReadingBook } from "../../redux/books/operations";
 
 const MyReading = () => {
   const location = useLocation();
@@ -11,8 +11,15 @@ const MyReading = () => {
 
   const handleStartReading = () => {
     if (book) {
-      console.log("Starting reading:", { id: book._id, page: 1 });
+      console.log("Starting reading:", { id: book._id, status: book.status });
       dispatch(startReadingBook({ id: book._id, page: 1 }));
+    }
+  };
+
+  const handleStopReading = () => {
+    if (book) {
+      console.log("Stopping reading:", { id: book._id, status: book.status });
+      dispatch(finishReadingBook({ id: book._id, page: 1 }));
     }
   };
 
@@ -32,6 +39,7 @@ const MyReading = () => {
           >
             <RecordIcon className={css.startIcon} />
           </button>
+          <button type="button" onClick={handleStopReading}>Stop reading</button>
         </div>
       ) : (
         <p className={css.noBook}>No book selected for reading.</p>

@@ -53,3 +53,17 @@ export const startReadingBook = createAsyncThunk(
     }
   }
 );
+
+export const finishReadingBook = createAsyncThunk(
+  "finishReading",
+  async ({ id, page }, thunkAPI) => {
+    try {
+      const { data } = await api.post("/books/reading/finish", { id, page });
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || error.message
+      );
+    }
+  }
+);
