@@ -45,13 +45,15 @@
   margin-top: 5px;
 }
 
-.startButton {
+.startButton,
+.stopButton {
   margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.startIcon {
+.startIcon,
+.stopIcon {
   width: 40px;
   height: 40px;
 }
@@ -99,7 +101,8 @@
     margin-top: 16px;
   }
 
-  .startIcon {
+  .startIcon,
+  .stopIcon {
     width: 50px;
     height: 50px;
   }

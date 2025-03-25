@@ -3,6 +3,8 @@ import {
   fetchRecommendedBooks,
   addToLibrary,
   removeFromLibrary,
+  startReadingBook,
+  finishReadingBook,
 } from "./operations";
 
 const initialState = {
@@ -48,6 +50,28 @@ const booksSlice = createSlice({
       })
       .addCase(removeFromLibrary.rejected, (state, action) => {
         state.error = action.payload;
+      })
+      .addCase(startReadingBook.fulfilled, (state, action) => {
+        const bookIndex = state.items.findIndex(
+          (book) => book._id === action.payload._id
+        );
+        if (bookIndex !== -1) {
+          state.items[bookIndex] = {
+            ...state.items[bookIndex],
+            ...action.payload,
+          };
+        }
+      })
+      .addCase(finishReadingBook.fulfilled, (state, action) => {
+        const bookIndex = state.items.findIndex(
+          (book) => book._id === action.payload._id
+        );
+        if (bookIndex !== -1) {
+          state.items[bookIndex] = {
+            ...state.items[bookIndex],
+            ...action.payload,
+          };
+        }
       });
   },
 });
