@@ -16,6 +16,11 @@ const initialState = {
     title: "",
     author: "",
   },
+  readingStatus: {
+    bookId: null,
+    isReading: false,
+    page: 1,
+  },
 };
 
 const booksSlice = createSlice({
@@ -51,27 +56,37 @@ const booksSlice = createSlice({
       .addCase(removeFromLibrary.rejected, (state, action) => {
         state.error = action.payload;
       })
-      .addCase(startReadingBook.fulfilled, (state, action) => {
-        const bookIndex = state.items.findIndex(
-          (book) => book._id === action.payload._id
-        );
-        if (bookIndex !== -1) {
-          state.items[bookIndex] = {
-            ...state.items[bookIndex],
-            ...action.payload,
-          };
-        }
+      .addCase(startReadingBook.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
       })
-      .addCase(finishReadingBook.fulfilled, (state, action) => {
-        const bookIndex = state.items.findIndex(
-          (book) => book._id === action.payload._id
-        );
-        if (bookIndex !== -1) {
-          state.items[bookIndex] = {
-            ...state.items[bookIndex],
-            ...action.payload,
-          };
-        }
+      .addCase(startReadingBook.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.readingStatus = {
+          bookId: action.payload.id,
+          isReading: true,
+          page: action.payload.page,
+        };
+      })
+      .addCase(startReadingBook.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      .addCase(finishReadingBook.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(finishReadingBook.fulfilled, (state) => {
+        state.isLoading = false;
+        state.readingStatus = {
+          bookId: null,
+          isReading: false,
+          page: 0,
+        };
+      })
+      .addCase(finishReadingBook.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
       });
   },
 });
