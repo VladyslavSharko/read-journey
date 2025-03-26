@@ -17,7 +17,7 @@ const MyReading = () => {
 
   const handleStartReading = () => {
     setIsReading(true);
-    console.log("Book:", book);
+    console.log("Book in handleStartReading:", book);
 
     if (book) {
       dispatch(startReadingBook({ id: book._id, page: 1 }));

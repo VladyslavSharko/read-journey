@@ -48,12 +48,18 @@ const booksSlice = createSlice({
       .addCase(addToLibrary.fulfilled, (state, action) => {
         state.library.push(action.payload);
       })
+      .addCase(removeFromLibrary.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
       .addCase(removeFromLibrary.fulfilled, (state, action) => {
+        state.isLoading = false;
         state.library = state.library.filter(
-          (book) => book._id !== action.payload._id
+          (book) => book._id !== action.payload.id
         );
       })
       .addCase(removeFromLibrary.rejected, (state, action) => {
+        state.isLoading = false;
         state.error = action.payload;
       })
       .addCase(startReadingBook.pending, (state) => {
@@ -61,6 +67,7 @@ const booksSlice = createSlice({
         state.error = null;
       })
       .addCase(startReadingBook.fulfilled, (state, action) => {
+        console.log("Start reading successful:", action.payload);
         state.isLoading = false;
         state.readingStatus = {
           bookId: action.payload.id,

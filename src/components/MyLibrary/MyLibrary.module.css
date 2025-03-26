@@ -123,6 +123,10 @@
   flex-shrink: 0;
 }
 
+.deleteBtnIcon {
+  stroke: #e85050;
+}
+
 .backdrop {
   position: fixed;
   top: 0;

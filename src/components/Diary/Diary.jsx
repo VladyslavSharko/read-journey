@@ -36,7 +36,7 @@ const Diary = () => {
 
               <div className={css.pagesProgress}>
                 <ProgressIcon className={css.progressIcon} />
-                
+
                 <button className={css.deleteButton} type="button">
                   <DeleteBtnIcon className={css.deleteIconProgress} />
                 </button>
