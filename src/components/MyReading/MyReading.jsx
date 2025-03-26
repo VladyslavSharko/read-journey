@@ -25,7 +25,7 @@ const MyReading = () => {
   };
 
   const handleFinishReading = () => {
-    setIsReading(false); // Виправлена помилка
+    setIsReading(false);
     console.log("Book:", book);
 
     if (book) {
@@ -44,11 +44,19 @@ const MyReading = () => {
           <p className={css.bookAuthor}>{book.author}</p>
 
           {isReading ? (
-            <button className={css.stopButton} type="button" onClick={handleFinishReading}>
+            <button
+              className={css.stopButton}
+              type="button"
+              onClick={handleFinishReading}
+            >
               <StopIcon className={css.startIcon} />
             </button>
           ) : (
-            <button className={css.startButton} type="button" onClick={handleStartReading}>
+            <button
+              className={css.startButton}
+              type="button"
+              onClick={handleStartReading}
+            >
               <RecordIcon className={css.startIcon} />
             </button>
           )}

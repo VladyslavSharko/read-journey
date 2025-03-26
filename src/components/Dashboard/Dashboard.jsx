@@ -6,7 +6,8 @@ import RecommendedBooks from "../RecommendedBooks/RecommendedBooks";
 import SloganBlock from "../SloganBlock/SloganBlock";
 import css from "./Dashboard.module.css";
 import StartReadingForm from "../StartReadingForm/StartReadingForm";
-import EmptyProgressBlock from "../EmptyProgressBlock/EmptyProgressBlock";
+// import EmptyProgressBlock from "../EmptyProgressBlock/EmptyProgressBlock";
+import Diary from "../Diary/Diary";
 
 const Dashboard = () => {
   const location = useLocation();
@@ -29,7 +30,8 @@ const Dashboard = () => {
       {location.pathname === "/reading" && (
         <>
           <StartReadingForm />
-          <EmptyProgressBlock />
+          {/* <EmptyProgressBlock /> */}
+          <Diary/>
         </>
       )}
     </div>

@@ -56,7 +56,8 @@ export const StopIcon = ({ className }) => {
   );
 };
 
-export const HourglassIcon = () => {
+// eslint-disable-next-line react/prop-types
+export const HourglassIcon = ({ className }) => {
   return (
     <div>
       <svg
@@ -65,6 +66,7 @@ export const HourglassIcon = () => {
         height="20"
         viewBox="0 0 20 20"
         fill="none"
+        className={className}
       >
         <path
           d="M10 10L6.43926 7.03274C5.91022 6.59187 5.6457 6.37144 5.45553 6.10122C5.28704 5.86179 5.16191 5.59464 5.08585 5.31192C5 4.99284 5 4.64851 5 3.95985V1.66669M10 10L13.5607 7.03274C14.0898 6.59187 14.3543 6.37144 14.5445 6.10122C14.713 5.86179 14.8381 5.59464 14.9142 5.31192C15 4.99284 15 4.64851 15 3.95985V1.66669M10 10L6.43926 12.9673C5.91022 13.4082 5.6457 13.6286 5.45553 13.8988C5.28704 14.1382 5.16191 14.4054 5.08585 14.6881C5 15.0072 5 15.3515 5 16.0402V18.3334M10 10L13.5607 12.9673C14.0898 13.4082 14.3543 13.6286 14.5445 13.8988C14.713 14.1382 14.8381 14.4054 14.9142 14.6881C15 15.0072 15 15.3515 15 16.0402V18.3334"
@@ -85,7 +87,8 @@ export const HourglassIcon = () => {
   );
 };
 
-export const PieChartIcon = () => {
+// eslint-disable-next-line react/prop-types
+export const PieChartIcon = ({ className }) => {
   return (
     <div>
       <svg
@@ -94,6 +97,7 @@ export const PieChartIcon = () => {
         height="20"
         viewBox="0 0 20 20"
         fill="none"
+        className={className}
       >
         <g clipPath="url(#clip0_18746_5038)">
           <path
@@ -374,7 +378,8 @@ export const DropdownBtnIcon = ({ className }) => {
   );
 };
 
-export const DeleteBtnIcon = () => {
+// eslint-disable-next-line react/prop-types
+export const DeleteBtnIcon = ({ className, stroke }) => {
   return (
     <div>
       <svg
@@ -383,28 +388,29 @@ export const DeleteBtnIcon = () => {
         height="14"
         viewBox="0 0 14 14"
         fill="none"
+        className={className}
       >
         <path
           d="M1.75 3.5H2.91667H12.25"
-          stroke="#E85050"
+          stroke={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M11.0837 3.5V11.6667C11.0837 11.9761 10.9607 12.2728 10.742 12.4916C10.5232 12.7104 10.2264 12.8333 9.91699 12.8333H4.08366C3.77424 12.8333 3.47749 12.7104 3.2587 12.4916C3.03991 12.2728 2.91699 11.9761 2.91699 11.6667V3.5M4.66699 3.5V2.33333C4.66699 2.02392 4.78991 1.72717 5.0087 1.50838C5.22749 1.28958 5.52424 1.16667 5.83366 1.16667H8.16699C8.47641 1.16667 8.77316 1.28958 8.99195 1.50838C9.21074 1.72717 9.33366 2.02392 9.33366 2.33333V3.5"
-          stroke="#E85050"
+          stroke={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M5.83301 6.41667V9.91667"
-          stroke="#E85050"
+          stroke={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M8.16699 6.41667V9.91667"
-          stroke="#E85050"
+          stroke={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -453,6 +459,29 @@ export const PaginationLeftIcon = ({ className, stroke }) => {
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+// eslint-disable-next-line react/prop-types
+export const ProgressIcon = ({ className }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="44"
+      height="18"
+      viewBox="0 0 44 18"
+      fill="none"
+      className={className}
+    >
+      <path d="M44 1L1 6.96493V18H44V1Z" fill="#30B94D" fillOpacity="0.2" />
+      <rect
+        width="43.5143"
+        height="2.17572"
+        rx="1"
+        transform="matrix(-0.987181 0.159606 0.159606 0.987181 43.2471 0)"
+        fill="#30B94D"
       />
     </svg>
   );
