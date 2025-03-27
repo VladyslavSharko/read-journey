@@ -5,6 +5,13 @@
   margin-top: 40px;
 }
 
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
 .containerDiaryButtons {
   display: flex;
   align-items: center;
@@ -14,11 +21,12 @@
 .diaryIcon {
   width: 16px;
   height: 16px;
+  stroke: #686868;
 }
 
-/* .diaryContentContainer {
-    position: relative;
-} */
+.diaryIconActive {
+  stroke: #f9f9f9;
+}
 
 .diaryContent {
   position: relative;
@@ -31,6 +39,15 @@
 .containerProgressInfo {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 17px;
+}
+
+.containerProgressInfo:first-child > .progressItem > .progressDate {
+  color: #f9f9f9;
+}
+
+.containerProgressInfo:last-child {
+  margin-bottom: 0;
 }
 
 .diaryContent::before {
@@ -48,6 +65,7 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 1.33;
+  color: #686868;
 }
 
 .progressDate::before {
@@ -57,8 +75,12 @@
   width: 16px;
   height: 16px;
   left: 16px;
-  border: 4px solid #f9f9f9;
+  border: 4px solid #686868;
   border-radius: 2px;
+}
+
+.containerProgressInfo:first-child > .progressItem > .progressDate::before {
+  border: 4px solid #f9f9f9;
 }
 
 .progressPersent {
@@ -111,4 +133,60 @@
   letter-spacing: -0.02em;
   max-width: 43px;
   margin-top: 7px;
+}
+
+.statisticProgressContent {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.statisticProgressItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #1f1f1f;
+  border-radius: 50%;
+  width: 116px;
+  height: 116px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.statisticProgressPersent {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.02em;
+}
+
+.readingProgressContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 21px;
+}
+
+.marker {
+  background-color: #30b94d;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.progressPersentStat {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.progressPages {
+  color: #686868;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
 }
