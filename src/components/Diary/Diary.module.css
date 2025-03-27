@@ -190,3 +190,70 @@
   letter-spacing: -0.02em;
   margin-top: 4px;
 }
+
+@media screen and (min-width: 768px) {
+  .diary {
+    width: 50%;
+  }
+
+  .containerTitle {
+    margin-top: 0;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .diaryIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .progressItem {
+    margin-left: 10px;
+  }
+
+  .progressDate {
+    font-size: 16px;
+  }
+
+  .progressDate::before {
+    width: 20px;
+    height: 20px;
+    border: 4px solid #686868;
+  }
+
+  .diaryContent::before {
+    left: 25px;
+  }
+
+  .progressPersent {
+    font-size: 20px;
+  }
+
+  .progressMinutes {
+    font-size: 12px;
+  }
+
+  .pagesAmount {
+    font-size: 14px;
+  }
+
+  .statisticProgressItem {
+    width: 138px;
+    height: 138px;
+    border: 12px solid #1f1f1f;
+  }
+
+  .statisticProgressPersent {
+    font-size: 20px;
+  }
+
+  .progressPersentStat {
+    font-size: 20px;
+  }
+
+  .progressPages {
+    font-size: 12px;
+  }
+}
