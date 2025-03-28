@@ -86,6 +86,8 @@ const Diary = () => {
                 <div className={css.pagesPerHour}>45 pages per hour</div>
               </div>
             </div>
+
+
           </div>
         ) : (
           <div className={css.statisticProgressContent}>

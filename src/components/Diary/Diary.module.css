@@ -34,6 +34,8 @@
   padding: 16px 16px 16px 41px;
   margin-top: 20px;
   border-radius: 12px;
+  height: 211px;
+  overflow: scroll;
 }
 
 .containerProgressInfo {
@@ -255,5 +257,10 @@
 
   .progressPages {
     font-size: 12px;
+  }
+
+  .diaryContent,
+  .statisticProgressContent {
+    height: 252px;
   }
 }

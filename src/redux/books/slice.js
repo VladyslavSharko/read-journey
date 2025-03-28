@@ -83,7 +83,8 @@ const booksSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(finishReadingBook.fulfilled, (state) => {
+      .addCase(finishReadingBook.fulfilled, (state, action) => {
+        console.log("Finish reading successful", action.payload);
         state.isLoading = false;
         state.readingStatus = {
           bookId: null,
