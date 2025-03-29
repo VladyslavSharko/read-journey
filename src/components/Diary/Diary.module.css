@@ -35,7 +35,8 @@
   margin-top: 20px;
   border-radius: 12px;
   height: 211px;
-  overflow: scroll;
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 .containerProgressInfo {
@@ -262,5 +263,15 @@
   .diaryContent,
   .statisticProgressContent {
     height: 252px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .diary {
+    width: 100%;
+  }
+
+  .diaryContent {
+    height: 373px;
   }
 }

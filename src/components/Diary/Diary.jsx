@@ -87,6 +87,26 @@ const Diary = () => {
               </div>
             </div>
 
+            <div className={css.containerProgressInfo}>
+              <div className={css.progressItem}>
+                <p className={css.progressDate}>21.10.2023</p>
+                <p className={css.progressPersent}>7.6%</p>
+                <p className={css.progressMinutes}>29 minutes</p>
+              </div>
+
+              <div className={css.pagesInfo}>
+                <p className={css.pagesAmount}>42 pages</p>
+
+                <div className={css.pagesProgress}>
+                  <ProgressIcon className={css.progressIcon} />
+                  <button className={css.deleteButton} type="button">
+                    <DeleteBtnIcon className={css.deleteIconProgress} />
+                  </button>
+                </div>
+
+                <div className={css.pagesPerHour}>45 pages per hour</div>
+              </div>
+            </div>
 
           </div>
         ) : (
