@@ -107,20 +107,26 @@ const Diary = () => {
                 <div className={css.pagesPerHour}>45 pages per hour</div>
               </div>
             </div>
-
           </div>
         ) : (
-          <div className={css.statisticProgressContent}>
-            <div className={css.statisticProgressItem}>
-              <p className={css.statisticProgressPersent}>100%</p>
-            </div>
+          <div>
+            <p className={css.diaryParagraph}>
+              Each page, each chapter is a new round of knowledge, a new step
+              towards understanding. By rewriting statistics, we create our own
+              reading history.
+            </p>
+            <div className={css.statisticProgressContent}>
+              <div className={css.statisticProgressItem}>
+                <p className={css.statisticProgressPersent}>100%</p>
+              </div>
 
-            <div className={css.readingProgressContainer}>
-              <div className={css.marker}></div>
+              <div className={css.readingProgressContainer}>
+                <div className={css.marker}></div>
 
-              <div className={css.readingProgress}>
-                <p className={css.progressPersentStat}>0%</p>
-                <p className={css.progressPages}>0 pages read</p>
+                <div className={css.readingProgress}>
+                  <p className={css.progressPersentStat}>0%</p>
+                  <p className={css.progressPages}>0 pages read</p>
+                </div>
               </div>
             </div>
           </div>

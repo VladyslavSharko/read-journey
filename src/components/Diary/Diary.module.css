@@ -171,6 +171,10 @@
   margin-top: 21px;
 }
 
+.diaryParagraph {
+  display: none;
+}
+
 .marker {
   background-color: #30b94d;
   width: 14px;
@@ -273,5 +277,26 @@
 
   .diaryContent {
     height: 373px;
+  }
+
+  .diaryParagraph {
+    display: block;
+    margin-top: 20px;
+    color: #686868;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    width: 293px;
+  }
+
+  .statisticProgressItem {
+    width: 189px;
+    height: 189px;
+    border: 16px solid #1f1f1f;
+  }
+
+  .statisticProgressContent {
+    height: 100%;
   }
 }
