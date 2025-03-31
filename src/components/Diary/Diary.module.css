@@ -36,7 +36,11 @@
   border-radius: 12px;
   height: 211px;
   overflow: auto;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
+}
+
+.diaryContent::-webkit-scrollbar {
+  display: none;
 }
 
 .containerProgressInfo {
