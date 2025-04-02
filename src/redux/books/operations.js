@@ -73,9 +73,9 @@ export const finishReadingBook = createAsyncThunk(
   }
 );
 
-export const getBoookInfo = createAsyncThunk(
+export const getBookInfo = createAsyncThunk(
   "getBookInfo",
-  async (id, thunkAPI) => {
+  async ({ id }, thunkAPI) => {
     try {
       const { data } = await api.get(`/books/${id}`);
       return data;

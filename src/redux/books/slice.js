@@ -5,7 +5,7 @@ import {
   removeFromLibrary,
   startReadingBook,
   finishReadingBook,
-  getBoookInfo,
+  getBookInfo,
 } from "./operations";
 
 const initialState = {
@@ -22,6 +22,7 @@ const initialState = {
     isReading: false,
     page: 1,
   },
+  readingProgress: []
 };
 
 const booksSlice = createSlice({
@@ -30,6 +31,9 @@ const booksSlice = createSlice({
   reducers: {
     setFilter(state, action) {
       state.filter = action.payload;
+    },
+    addReadingProgress(state, action) {
+      state.readingProgress.push(action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -97,17 +101,9 @@ const booksSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(getBoookInfo.pending, (state) => {
-        state.isLoading = true;
-        state.error = null;
-      })
-      .addCase(getBoookInfo.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.bookInfo = action.payload;
-      })
-      .addCase(getBoookInfo.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.payload;
+      .addCase(getBookInfo.fulfilled, (state, action) => {
+        console.log("Updating readingProgress:", action.payload.readingProgress);
+        state.readingProgress = action.payload.readingProgress || [];
       })
       ;
   },
@@ -124,9 +120,8 @@ export const selectFilteredBooks = createSelector(
   }
 );
 
-export const { setFilter } = booksSlice.actions;
+export const { setFilter, addReadingProgress } = booksSlice.actions;
 export const booksReducer = booksSlice.reducer;
-
 
 // import { createSelector, createSlice } from "@reduxjs/toolkit";
 // import {

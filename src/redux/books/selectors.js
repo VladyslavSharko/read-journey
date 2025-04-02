@@ -5,5 +5,4 @@ export const selectFilter = (state) => state.books.filter;
 export const selectAddBook = (state) => state.books.library;
 export const selectRemoveBook = (state) => state.books.library;
 
-// export const selectLibrary = (state) => state.books.library;
-// export const selectReadingStatus = (state) => state.books.readingStatus;
+export const selectReadingProgress = (state) => state.books.readingProgress;
