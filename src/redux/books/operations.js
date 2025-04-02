@@ -72,3 +72,15 @@ export const finishReadingBook = createAsyncThunk(
     }
   }
 );
+
+export const getBoookInfo = createAsyncThunk(
+  "getBookInfo",
+  async (id, thunkAPI) => {
+    try {
+      const { data } = await api.get(`/books/${id}`);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
